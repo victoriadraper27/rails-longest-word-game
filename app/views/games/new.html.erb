@@ -8,10 +8,13 @@
     <% end %>
 </div>
 
-<form action="/score" method="score">
-  <label for="word">What is the longest word you can find ?</label>
-  <input type="text" name="word" class="form-control">
-  <input type="submit" value="Play">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <%= hidden_field_tag :letters, @letters %>
-</form>
+
+  <form action="/score" method="score">
+    <div class="form-group">
+      <label for="word">What is the longest word you can find ?</label>
+      <input type="text" name="word" class="form-control">
+      <input type="submit" value="Play">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :letters, @letters %>
+    </div>
+  </form>
